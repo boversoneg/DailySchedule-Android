@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:stretchColumns="1,2,3"
+    android:layout_margin="8dp">
+
+    <TextView
+        android:text="Bezpieczeństwo wewnętrzne - harmonogram"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:layout_marginTop="5dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/api_status"
+        android:text="Status API: Ładowanie.."
+        android:textSize="15dp"
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:background="#383838"
+        android:weightSum="5"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:layout_height="wrap_content"
+            android:text="Przedmiot"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:gravity="start"
+            android:paddingStart="8dp"
+            android:paddingEnd="4dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Sala"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="4dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1.5"
+            android:layout_height="wrap_content"
+            android:text="Godziny"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:gravity="end"
+            android:paddingStart="4dp"
+            android:paddingEnd="8dp" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</TableLayout>
